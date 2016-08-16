@@ -41,7 +41,7 @@ def kMeans(dataset, k):
         for cent in range(k):
             for row in range(m):
                 cluster = []
-                if clusterAssment[row, :] == cent:
+                if clusterAssment[row, 0] == cent:
                     cluster.append([dataset[row, :]])
                 centroids[cent, :] = np.mean(cluster, axis=0)
             del cluster
